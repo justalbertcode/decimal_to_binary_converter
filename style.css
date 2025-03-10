@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-grey: #f5f6f7;
+  --dark-gray: #aaa;
+  --white: #fff;
+  --black: #000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    monospace;
+  font-size: 1.125rem;
+  color: var(--light-grey);
+  background-color: var(--black);
+  padding: 0 4px;
+}
+
+h1 {
+  font-size: 2.125rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: clamp(320px, 50vw, 460px);
+  margin: 10px auto;
+}
+
+.input-container label {
+  white-space: nowrap;
+  word-spacing: -6px;
+}
+
+.convert-btn {
+  font-size: inherit;
+  font-family: inherit;
+  background-color: var(--white);
+  width: 100%;
+  height: 2rem;
+  padding: 0 6px;
+  border: 1px solid var(--white);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: ease-in all 0.2s;
+}
+
+.convert-btn:hover{
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.number-input {
+  font-size: inherit;
+  padding: 0.3rem;
+  width: 100%;
+}
+
+.output-container {
+  margin-inline: auto;
+  width: clamp(320px, 50vw, 460px);
+}
+
+#result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-align: center;
+  min-height: 80px;
+  margin-block-start: 20px;
+  padding: 15px;
+  border: 2px solid var(--white);
+  border-radius: 2px;
+}
+
+#animation-container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: end;
+  gap: 1rem;
+  margin-block-end: 1rem;
+  min-height: 40vh;
+  border: 2px dashed var(--white);
+  padding: 1rem;
+}
+
+.animation-frame {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+  padding: 15px 10px;
+  border: 5px solid var(--white);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 36em) {
+  body {
+    font-size: 1rem;
+  }
+
+  .input-container {
+    flex-direction: row;
+    width: unset;
+  }
+
+  .number-input {
+    width: unset;
+  }
+}
